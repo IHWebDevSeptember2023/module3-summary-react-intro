@@ -53,6 +53,20 @@ Son funciones que nos permiten usar el estado y otras características de React.
 
 ## 🗽 Estado
 Los estados en un componente son variables que se pueden modificar y que al hacerlo, React se encarga de renderizar el componente de nuevo con los nuevos valores.
+Para crear un estado, usamos el hook ``useState``. Este hook nos devuelve un array con dos elementos: el valor del estado y una función para modificarlo. 
+```javascript
+const [count, setCount] = useState(0);
+```
+En el ejemplo anterior, ``count`` es el valor del estado y ``setCount`` es la función que nos permite modificarlo. Para modificar el estado, llamamos a la función ``setCount`` y le pasamos el nuevo valor.
+```javascript
+setCount(1);
+```
+
+El estado también tiene acceso al valor anterior, por lo que podemos hacer algo como esto:
+```javascript
+setCount((prevCount)=> prevCount + 1);
+```
+El argumento que recibe la función ``setCount`` es el valor anterior del estado.
 
 ## useEffect
 Es un hook que nos permite ejecutar código cuando se monta, desmonta o actualiza un componente. Es decir, nos permite ejecutar código en ciertos momentos de la vida de un componente.
