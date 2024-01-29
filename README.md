@@ -96,9 +96,7 @@ useEffect(() => {
 ```javascript
 useEffect(() => {
     // Código que se ejecuta cuando se monta el componente
-    return () => {
-        // Código que se ejecuta cuando se desmonta el componente
-    }
-}, [variableDeEstado, prop]);
+    // Como hemos añadido una variable de estado o prop, se ejecutará cuando se monte el componente y cuando se actualice la variable de estado o prop
+}, [variableDeEstado, propRandom]);
 ```
 
